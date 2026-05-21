@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>基于机器视觉与卷积神经网络的蔬菜净选包装一体化系统</title>
+  
+  <meta name="description" content="融合机器视觉与卷积神经网络的一体化蔬菜净选加工柔性装备。">
+  <meta name="keywords" content="机器视觉, 卷积神经网络, 蔬菜净选, 物联网, 柔性装备, 智能包装, 江南大学">
+  <meta name="author" content="陈茜, 胡沁萍, 盖昶沣, 蒋子豪, 袁皓">
+  
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .my-custom-slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .my-custom-slider .item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0; /* 取消左右 padding 防止宽度计算异常 */
+    }
+    .my-custom-slider video {
+      width: 100%;
+      max-width: 900px; /* 限制最大宽度，保证美观 */
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            
+            <h1 class="title is-2 publication-title">基于机器视觉与卷积神经网络的<br>蔬菜净选包装一体化系统</h1>
+            
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">陈茜,</span>
+              <span class="author-block">胡沁萍,</span>
+              <span class="author-block">盖昶沣,</span>
+              <span class="author-block">蒋子豪,</span>
+              <span class="author-block">袁皓</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">江南大学机械工程学院</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/pdfs/manual.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>说明书</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="static/cad/design.zip" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-archive"></i>
+                    </span>
+                    <span>CAD 图纸</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="main-demo" autoplay controls muted loop playsinline height="100%" preload="metadata">
+          <source src="static/videos/main_demo.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered" style="margin-top: 15px;">
+          整机演示介绍：实现去根矫位、黄叶夹除、多品类自适应清洗与高精度包装。
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">项目摘要</h2>
+          <div class="content has-text-justified">
+            <p>
+              针对蔬菜加工环节机械化智能化程度低、人工分选效率低等痛点，本设计研发了一款融合机器视觉与卷积神经网络的一体化蔬菜净选加工柔性装备。该装置集成视觉识别、柔性除杂、双态清洗、智能称重包装及双核心控制系统，实现去根矫位、黄叶夹除、多品类自适应清洗、高精度包装及 APP 远程监控等功能。通过样机验证，该装备具备智能低损、高效适配特点，为蔬菜供应链提供了可行的自动化加工解决方案。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">核心功能演示</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item" style="padding: 0 10px;">
+            <img src="static/images/carousel1.jpg" alt="整机实物演示图"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 10px;">整机实物演示图</h2>
+          </div>
+          <div class="item" style="padding: 0 10px;">
+            <img src="static/images/carousel2.jpg" alt="视觉识别去黄叶图"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 10px;">视觉识别去黄叶图</h2>
+          </div>
+          <div class="item" style="padding: 0 10px;">
+            <img src="static/images/carousel3.jpg" alt="称重、中封、上封结构图"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 10px;">称重、中封、上封结构图</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">装配与全流程演示</h2>
+        <div id="single-video-carousel" class="my-custom-slider">
+          
+          <div class="item">
+            <video poster="" id="video1" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/exploded_view.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+          <div class="item">
+            <video poster="" id="video2" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/full_process.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">团队成员与项目纪实</h2>
+        <div id="team-carousel" class="carousel results-carousel">
+          <div class="item" style="padding: 0 10px;">
+            <img src="static/images/team_competition.jpg" alt="比赛现场" style="border-radius: 8px; margin: 0 auto; display: block;"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 10px;">比赛现场</h2>
+          </div>
+          <div class="item" style="padding: 0 10px;">
+            <img src="static/images/team_debug1.jpg" alt="设备调试 (一)" style="border-radius: 8px; margin: 0 auto; display: block;"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 10px;">设备调试 (一)</h2>
+          </div>
+          <div class="item" style="padding: 0 10px;">
+            <img src="static/images/team_debug2.jpg" alt="设备调试 (二)" style="border-radius: 8px; margin: 0 auto; display: block;"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 10px;">设备调试 (二)</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-light" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title is-3">BibTeX 引用</h2>
+      </div>
+      <pre id="bibtex-code"><code>@misc{Jiangnan2026VegSystem,
+  title={基于机器视觉与卷积神经网络的蔬菜净选包装一体化系统},
+  author={陈茜 and 胡沁萍 and 盖昶沣 and 蒋子豪 and 袁皓},
+  year={2026},
+  publisher={School of Mechanical Engineering, Jiangnan University},
+  note={Mechanical/AI Innovation Contest Project}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              本页面基于 <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> 构建。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      if (typeof bulmaCarousel !== 'undefined') {
+        bulmaCarousel.attach('.my-custom-slider', {
+          slidesToScroll: 1,
+          slidesToShow: 1,    /* 绝对限制每次只有1个 */
+          loop: true,
+          autoplay: false,    /* 禁止自动滚动轮播 */
+          pagination: true,
+          navigation: true
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
